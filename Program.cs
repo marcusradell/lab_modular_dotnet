@@ -1,6 +1,3 @@
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,6 +19,8 @@ if (app.Environment.IsDevelopment())
 
 var identitiesKit = new IdentitiesKit();
 
-identitiesKit.MapRouter(app);
+
+identitiesKit.MapGroup(app.MapGroup("/identities"));
+// identitiesKit.MapRouter(app);
 
 app.Run();

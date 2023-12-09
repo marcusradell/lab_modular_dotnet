@@ -1,16 +1,8 @@
-
 public class IdentitiesKit
 {
-    public IdentitiesKit()
+    public void MapGroup(RouteGroupBuilder group)
     {
-
-    }
-
-    private string Url(string relativeUrl) => $"/identities{relativeUrl}";
-
-    public void MapRouter(WebApplication app)
-    {
-        app.MapGet(Url("/get_all"), () => new[] { "user1", "user2" })
+        group.MapGet("/get_all", () => new[] { "user1", "user2" })
             .WithName("GetAllIdentities")
             .WithOpenApi();
     }
