@@ -14,13 +14,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// app.UseHttpsRedirection();
-
-
 var identitiesKit = new IdentitiesKit();
 
-
 identitiesKit.MapGroup(app.MapGroup("/identities"));
-// identitiesKit.MapRouter(app);
 
 app.Run();
