@@ -18,4 +18,6 @@ var identitiesKit = new IdentitiesKit();
 
 identitiesKit.MapGroup(app.MapGroup("/identities"));
 
+Console.WriteLine(identitiesKit.GetAll());
+
 app.Run();
