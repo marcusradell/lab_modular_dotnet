@@ -20,4 +20,7 @@ identitiesKit.MapGroup(app.MapGroup("/identities"));
 
 Console.WriteLine(identitiesKit.GetAll());
 
-app.Run();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var url = $"http://0.0.0.0:{port}";
+
+app.Run(url);
